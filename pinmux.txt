@@ -1,0 +1,13 @@
+GPIO1_6 / 37 > gpmc_ad6 / 38 / P8-3 / prev -> dir "in", edge "falling"
+GPIO1_7 / 37 > gpmc_ad7 / 39 / P8-4 / next -> dir "in", edge "falling"
+GPIO1_2 / 37 > gpmc_ad2 / 34 / P8-5 / stop -> dir "in", edge "falling"
+
+GPIO1_15 / 37 > gpmc_ad15 / 47 / P8-15 / config switch -> dir "in", edge "both"
+
+GPIO1_13 / P8-11 / 45 / led1
+GPIO1_12 / P8-12 / 44 / led2
+
+UART1_RXD / P9-26 / tx rfid reader. rx unused.
+
+GND / P9-1 / GND rfid reader
+VCC 5V / P9-(5,7) / +5V rfid reader
