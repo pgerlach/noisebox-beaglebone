@@ -40,11 +40,11 @@ class Button:
 
   def action(self):
     if self._edge != "both":
-      url = "%s/%s" % (baseUrl, self._action)
+      url = "%s/cmd/%s" % (baseUrl, self._action)
     else:
       self._fd.seek(0)
       value = self._fd.read()
-      url = "%s/%s/%s" % (baseUrl, self._action, value[0])
+      url = "%s/cmd/%s/%s" % (baseUrl, self._action, value[0])
     print "calling url: %s" % url
     try:
       urllib.urlopen(url)
