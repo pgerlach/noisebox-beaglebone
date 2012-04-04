@@ -15,8 +15,8 @@ class Button:
     gpioDir = "/sys/class/gpio/gpio%d" % (self._gpio)
     if not os.path.exists(gpioDir):
       open("/sys/class/gpio/export", 'wb').write("%s\n" % (self._gpio))
-      open("%s/edge" % (gpioDir), 'wb').write("%s\n" % (self._edge))
-      open("%s/direction" % (gpioDir), 'wb').write("in\n")
+    open("%s/edge" % (gpioDir), 'wb').write("%s\n" % (self._edge))
+    open("%s/direction" % (gpioDir), 'wb').write("in\n")
 
   def add_to_poll(self, poll):
     self._fd = open("/sys/class/gpio/gpio%d/value" % (self._gpio), "rb")
